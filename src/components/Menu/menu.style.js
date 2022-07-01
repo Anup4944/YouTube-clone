@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   flex: 1;
-  background-color: #202020;
-  color: white;
+  background-color: ${({ theme }) => theme.bg};
+  color: ${({ theme }) => theme.text};
   height: 100vh;
   font-size: 15px;
   position: sticky;
@@ -35,7 +35,7 @@ export const Item = styled.div`
 
 export const Hr = styled.hr`
   margin: 15px 0px;
-  border: 0.5px solid #373737;
+  border: 0.5px solid ${({ theme }) => theme.soft}; ;
 `;
 
 export const Login = styled.div``;
@@ -51,4 +51,11 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   gap: 5px;
+`;
+
+export const Title = styled.h2`
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin-bottom: 20px;
 `;

@@ -8,6 +8,7 @@ import {
   Hr,
   Login,
   Button,
+  Title,
 } from "./menu.style";
 import YouLogo from "../../images/logo.png";
 import HomeIcon from "@mui/icons-material/Home";
@@ -27,7 +28,7 @@ import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
 
-const Menu = () => {
+const Menu = ({ darkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
@@ -64,6 +65,8 @@ const Menu = () => {
             Sign In
           </Button>
         </Login>
+        <Title>Best of YouTube</Title>
+
         <Hr />
         <Item>
           <LibraryMusicOutlinedIcon />
@@ -102,7 +105,7 @@ const Menu = () => {
           <HelpOutlineOutlinedIcon />
           Help
         </Item>
-        <Item>
+        <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessOutlinedIcon />
           Light Mode
         </Item>
