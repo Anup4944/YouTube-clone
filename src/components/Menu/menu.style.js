@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   flex: 1;
-  background-color: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => theme.bgLighter};
   color: ${({ theme }) => theme.text};
-  height: 100vh;
-  font-size: 15px;
+  font-size: 14px;
   position: sticky;
   top: 0;
 `;
@@ -57,5 +56,6 @@ export const Title = styled.h2`
   font-size: 14px;
   font-weight: 500;
   color: #aaaaaa;
+  margin-top: 20px;
   margin-bottom: 20px;
 `;
