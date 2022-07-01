@@ -23,6 +23,7 @@ import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
+import Comments from "../../components/Comments/Comments";
 
 const VideoPage = () => {
   return (
@@ -61,7 +62,10 @@ const VideoPage = () => {
         <Hr />
         <Channel>
           <ChannelInfo>
-            <Image src="" alt="avatar" />
+            <Image
+              src=" https://i.ytimg.com/vi/8YbZuaBP9B8/maxresdefault.jpg"
+              alt="avatar"
+            />
             <ChannelDetails>
               <ChannelName>Lama Dev</ChannelName>
 
@@ -77,6 +81,8 @@ const VideoPage = () => {
 
           <ChannelBtn>Subscribe</ChannelBtn>
         </Channel>
+        <Hr />
+        <Comments />
       </Content>
       <Recommendation>recommendation</Recommendation>
     </Container>
