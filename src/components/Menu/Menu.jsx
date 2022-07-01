@@ -63,10 +63,15 @@ const Menu = ({ darkMode, setDarkMode }) => {
         <Hr />
         <Login>
           Sign in to like videos, comments and subscribe
-          <Button>
-            <AccountCircleOutlinedIcon />
-            Sign In
-          </Button>
+          <Link
+            to="/signin"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Button>
+              <AccountCircleOutlinedIcon />
+              Sign In
+            </Button>
+          </Link>
         </Login>
         <Title>Best of YouTube</Title>
 

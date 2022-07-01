@@ -7,6 +7,7 @@ import { darkTheme, lightTheme } from "./utils/Theme.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import VideoPage from "./pages/VideoPage/VideoPage";
+import SignIn from "./pages/SignIn/SignIn.jsx";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -20,7 +21,9 @@ const App = () => {
             <Wrapper>
               <Routes>
                 <Route index element={<HomePage />} />
-                <Route path="/video">
+                <Route path="signin" element={<SignIn />} />
+
+                <Route path="video">
                   <Route path=":id" element={<VideoPage />} />
                 </Route>
               </Routes>

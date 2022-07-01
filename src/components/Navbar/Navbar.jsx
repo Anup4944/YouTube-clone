@@ -10,6 +10,7 @@ import {
   Button,
   Input,
 } from "./navbar.style.js";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -20,10 +21,12 @@ const Navbar = () => {
           <SearchOutlinedIcon />
         </SearchContainer>
 
-        <Button>
-          <AccountCircleOutlinedIcon />
-          SIGN IN
-        </Button>
+        <Link to="/signin" style={{ textDecoration: "none", color: "inherit" }}>
+          <Button>
+            <AccountCircleOutlinedIcon />
+            SIGN IN
+          </Button>
+        </Link>
       </Wrapper>
     </Container>
   );

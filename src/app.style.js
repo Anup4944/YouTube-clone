@@ -10,5 +10,5 @@ export const Main = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  padding: 22px 96px;
+  padding: 22px 90px;
 `;

@@ -1,20 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 360px;
-  margin-bottom: 45px;
+  width: ${(prop) => prop.type !== "sm" && "360px"};
+  margin-bottom: ${(prop) => (prop.type === "sm" ? "10px" : "45px")};
   cursor: pointer;
+  display: ${(prop) => prop.type === "sm" && "flex"};
+  gap: 10px;
 `;
 
 export const Image = styled.img`
   width: 100%;
-  height: 202px;
+  height: ${(prop) => (prop.type === "sm" ? "120px" : "202px")};
+  flex: 1;
 `;
 
 export const Info = styled.div`
   display: flex;
-  margin-top: 15px;
+  margin-top: ${(prop) => prop.type !== "sm" && "16px"};
   gap: 12px;
+  flex: 1;
 `;
 
 export const ChannelImg = styled.img`
@@ -22,6 +26,7 @@ export const ChannelImg = styled.img`
   height: 36px;
   border-radius: 50px;
   background-color: #999;
+  display: ${(prop) => prop.type === "sm" && "none"}; ;
 `;
 
 export const Texts = styled.div``;
@@ -38,4 +43,7 @@ export const ChannelName = styled.h2`
   margin: 9px 0px;
 `;
 
-export const Infos = styled.div``;
+export const Infos = styled.div`
+  font-size: 12px;
+  color: ${({ theme }) => theme.textSoft};
+`;
